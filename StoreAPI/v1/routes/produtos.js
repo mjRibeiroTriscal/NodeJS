@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
             (error, result, field) => {
                 if(error) { return res.status(500).send({ error: error, response: null }) }
                 const response = {
-                    quantidade: result.length,
+                    quantidadeProdutos: result.length,
                     produtos: result.map(prod => {
                         return {
                             id_produto: prod.id_produto,
